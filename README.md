@@ -20,9 +20,9 @@ counter = solutions.ObjectCounter(
 ```
 
 ## Demo  
-See `Demo.gif`
-[Demo](Demo.gif)
-![Demo](Demo.gif)
+See `demo.gif`
+[demo](demo.gif)
+![demo](demo.gif)
 
 ## Setup 
 Search online how setup conda. 
