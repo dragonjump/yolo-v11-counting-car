@@ -13,14 +13,13 @@ def rotate_point(x, y, cx, cy, angle_deg):
     return (int(cx + x_rot), int(cy + y_rot))
 
 # Original square points
-region_points = [(430, 550), (505, 550), (505, 695), (430, 695)]
+region_points = [(495, 595), (535, 595), (535, 762), (495, 762)]
 # Calculate center
 cx, cy = (345 + 920) / 2, (380 + 485) / 2
 # Rotate by x degrees
-angle =0
-region_points = [rotate_point(x, y, cx, cy, angle) for (x, y) in region_points]
+angle =4
 # region_points = [rotate_point(x, y, cx, cy, angle) for (x, y) in region_points]
-
+ 
 cap = cv2.VideoCapture("video/federal.mp4")
 assert cap.isOpened(), "Error reading video file"
  
@@ -31,9 +30,10 @@ video_writer = cv2.VideoWriter("object_federal_traffic_counting_output.mp4", cv2
 # Initialize object counter object
 counter = solutions.ObjectCounter( 
     show=True,  # display the output
-    show_in=True,
-    show_out=False,
-    conf=0.2, 
+    show_in=False,
+    show_out=True,
+    conf=0.18, 
+    iou = 0.1,
     classes=[9,10],
     tracker="bytetrack.yaml",
     region=region_points,  # pass region points
