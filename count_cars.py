@@ -5,7 +5,7 @@ from ultralytics import solutions
 cap = cv2.VideoCapture("video/roadtraffic1.mp4")
 assert cap.isOpened(), "Error reading video file"
 
-region_points = [(650, 615), (1280,615)]                                      # line counting
+region_points = [(650, 415), (1280,415)]                                      # line counting
 # region_points = [(20, 400), (1080, 400), (1080, 360), (20, 360)]  # rectangle region
 # region_points = [(20, 400), (1080, 400), (1080, 360), (20, 360), (20, 400)]   # polygon region
 
@@ -18,10 +18,11 @@ counter = solutions.ObjectCounter(
     show=True,  # display the output
     show_in=False,
     show_out=True,
-    conf=0.6,
+    conf=0.5, 
+    classes=[9,10],
     tracker="bytetrack.yaml",
     region=region_points,  # pass region points
-    model="yolo11n-obb.pt",  # model="yolo11n-obb.pt" for object counting with OBB model.
+    model="yolo11x-obb.pt",  # model="yolo11n-obb.pt" for object counting with OBB model.
     # classes=[0, 2],  # count specific classes i.e. person and car with COCO pretrained model.
  
 )

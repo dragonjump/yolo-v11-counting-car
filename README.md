@@ -5,6 +5,9 @@ This repository counts video cars. You can use it for video or live stream.
 This approach uses a simple line counter. Whenever the car crosses the line, we count them out. 
 
 
+## License
+https://www.ultralytics.com/legal/agpl-3-0-software-license
+ 
 
 ## Demo  
 See `demo.gif`
@@ -13,6 +16,10 @@ See `demo.gif`
 
 
 ## Setup 
+
+1. Please separately download `yolo11x-obb.pt` in this folder
+
+
 Search online how setup conda. 
 Once you setup, create a conda environment with Python 3.11:
 ```
