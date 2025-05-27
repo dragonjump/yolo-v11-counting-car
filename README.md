@@ -2,8 +2,28 @@
  
 # Video Car Counter  
 This repository counts video cars. You can use it for video or live stream.
-This approach uses a simple line counter. Whenever the car crosses the line, we count them out. You may adjust the parameter in the code accordingly.
+This approach uses a simple line counter. Whenever the car crosses the line, we count them out. 
 
+
+
+## Demo  
+See `demo.gif`
+[demo](demo.gif)
+![demo](demo.gif)
+
+
+## Setup 
+Search online how setup conda. 
+Once you setup, create a conda environment with Python 3.11:
+```
+conda create --name ultralytics-env python=3.11 -y
+conda activate ultralytics-env
+conda activate ultralytics-env
+conda install -c pytorch pytorch torchvision torchaudio
+
+```
+
+You may adjust the parameter in the code accordingly. Do read the ultralytics doc.
 ```
 # Initialize object counter object
 counter = solutions.ObjectCounter(
@@ -17,22 +37,6 @@ counter = solutions.ObjectCounter(
     # classes=[0, 2],  # count specific classes i.e. person and car with COCO pretrained model.
  
 )
-```
-
-## Demo  
-See `demo.gif`
-[demo](demo.gif)
-![demo](demo.gif)
-
-## Setup 
-Search online how setup conda. 
-Once you setup, create a conda environment with Python 3.11:
-```
-conda create --name ultralytics-env python=3.11 -y
-conda activate ultralytics-env
-conda activate ultralytics-env
-conda install -c pytorch pytorch torchvision torchaudio
-
 ```
 
 ## Video credit 
